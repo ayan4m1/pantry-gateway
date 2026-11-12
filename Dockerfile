@@ -27,4 +27,4 @@ RUN dotnet publish "./Gateway.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "pantry-gateway.dll"]
+ENTRYPOINT ["dotnet", "Gateway.dll"]
